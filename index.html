@@ -1,0 +1,45 @@
+<style>
+
+  #box {
+    width: 300px;
+    background-color: pink;
+    padding: 20px;
+    font-family: sans-serif;
+  }
+  </style>
+
+<div id="box">
+  poop
+</div>
+
+
+<script>
+	const box = document.querySelector('#box')
+  console.log(box.textContent)
+  
+  //innerText and textContent are two different commands
+  //textContent retains the format
+  
+  
+  
+  
+  function randomColor () {
+    const r = Math.random() * 255
+    const g = Math.random() * 255
+    const b = Math.random() * 255
+    return `rgb(${r}, ${g}, ${b})`}
+  
+  function updateBox (){
+    box.style.backgroundColor = randomColor()
+    box.style.color = randomColor()
+    document.body.style.backgroundColor = randomColor()
+  }
+
+  box.innerText = 'hellooo'
+  box.style.color = randomColor()
+  box.style.background = randomColor()
+  
+  box.addEventListener('click', updateBox)
+
+  
+</script>
